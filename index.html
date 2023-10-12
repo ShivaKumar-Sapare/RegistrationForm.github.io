@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        legend{
+            color: rgb(60, 76, 255);
+            font-size: large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h1{
+            color:rgb(195, 0, 255);
+            text-align: center;
+        }
+        label{
+            color: darkorange;
+        }
+        form{
+            width: 50%;
+            margin: 50px auto;
+        }
+        fieldset{
+            background-color: aqua;
+            border-radius: 25px;
+        }
+        #submit{
+            border-radius: 5px;
+        }
+        label{
+            width: 200px;
+            display: inline-block;
+        }
+
+        #sub:hover{
+            background-color: greenyellow
+        }
+        
+        .tskills,.sskills{
+            width: 95%;
+            margin: 5px auto;
+            border-radius: 10px;
+        }
+        #check{
+            width: 80%;
+        }
+        body{
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="userMessage.html">
+        <center><h1>Registration Form</h1></center>
+        <fieldset id="1">
+            <legend><b>Personal Details</b></legend>
+            <label for="name">Full Name : </label>
+            <input type="text" id="name" required pattern="[A-Za-z. ]{3,25}" placeholder="Enter your full name">
+            <br><br>
+
+            <label for="emailid">Email Id : </label>
+            <input type="email" id="emailid" name="emailid" required placeholder="Enter email address">
+            <br><br>
+
+            <label for="phno">Mobile Number : </label>
+            <input type="text" id="phno" required pattern="[6-9]{1}[0-9]{9}" placeholder="Enter mobile number">
+            <br><br>
+
+            <label for="hno">House No/Flat No : </label>
+            <input type="text" id="street">
+            <br><br>
+
+            <label for="street">Street Name : </label>
+            <input type="text" id="street">
+            <br><br>
+
+            <label for="city">City : </label>
+            <input type="text" id="city"><br><br>
+
+            <label for="pincode">PinCode : </label>
+            <input type="Number" id="pincode">
+            <br><br>
+        </fieldset><br><br>
+
+        <fieldset id="2">
+            <legend><b>Educational Details</b></legend>
+            <label for="higherEducation">Recent Completed Education : </label>
+            <input list="HE" id="higherEducation" name="higherEducation" required>
+            <datalist id="HE">
+                <option>Post Graduation</option>
+                <option>Under Graduation</option>
+                <option>Diploma</option>
+                <option>Intermediate</option>
+            </datalist>
+            <br><br>
+
+            <label for="college">College Name : </label>
+            <input type="text" id="college" name="college" required>
+            <br><br>
+
+            <label for="yop">Year of Passing : </label>
+            <input list="yog" id="yop" name="yop" required>
+            <datalist id="yog">
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+            </datalist>
+            <br><br>
+
+            <label for="percent">Percentage (cgpa*9.5) : </label>
+            <input type="text" id="percent" name="percent" required placeholder="Ex: 80" pattern="[0-9]{2, 3}">
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend><b>Experience details</b></legend>
+            <label for="exp">Experience (in years) : </label>
+            <input type="text" pattern="[0-9]{0,8}" placeholder="If No experience put 0" required>
+            <br><br>
+
+            <label for="company">Company Name : </label>
+            <input type="text" required placeholder="If you are a fresher put N/A">
+            <br><br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend><b>Skills</b></legend>
+            <fieldset class="tskills">
+                <legend><b>Technical Skills</b></legend>
+                <label for="skills">Technical Skills : </label>  
+                <input type="text" id="skills" placeholder="Ex: Java">       
+            </fieldset>
+            <br>
+
+            <fieldset class="sskills">
+                <legend><b>SoftSkills</b></legend>
+                <label for="sskills">SoftSkills : </label>  
+                <input type="text" id="sskills" placeholder="Ex: Time Management">
+            </fieldset>
+            <br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend><b>Project Details</b></legend>
+            <label for="pname">Project Title : </label>
+            <input type="text" id="pname">
+            <br><br>
+
+            <label for="desc">Description of the Project : </label>
+            <input type="text" id="desc">
+            <br>
+        </fieldset>
+        <br>
+
+        <input type="checkbox" id="agree" required>
+        <label for="agree" id="check">I confirm that the above information given is correct</label>
+        <br><br>
+
+        <center><input type="submit" id="sub"></center>
+    </form>
+</body>
+</html>
